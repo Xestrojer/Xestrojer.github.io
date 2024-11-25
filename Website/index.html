@@ -12,7 +12,18 @@
         <script src="assets/js/functions.js"></script>
     </head>
     <body class="light">
-        <h1>About</h1>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 id="about">About</h1>
         <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
         <div class="row">
             <img src="assets/img/avatar.jpg">
@@ -36,7 +47,7 @@
                 <p>Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.</p>
             </div>
         </div>
-        <h1>Resume</h1>
+        <h1 id="resume">Resume</h1>
         <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
         <div class="row">
             <div class="column">
@@ -64,7 +75,7 @@
             </div>
         </div>
         <button onclick='toggleMode()' id='darkmode-button'>Dark mode</button>
-        <h1>Portfolio</h1>
+        <h1 id="portfolio">Portfolio</h1>
         <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
         <section id="gallery">
             <img src="assets/img/blank-book.jpg">
@@ -72,7 +83,7 @@
             <img src="assets/img/bear.jpg">
             <img src="assets/img/moth-lamp.jpg">
         </section>
-        <h1>Services</h1>
+        <h1 id="services">Services</h1>
         <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
         <video controls width="600">
             <source src="assets/video/blocks.mp4" type="video/mp4">
@@ -87,5 +98,9 @@
         <audio controls>
             <source src="assets/audio/pixelman-short-version-199924.mp3" type="audio/mpeg">
         </audio>
+        <button onclick="topFunction()" id="STTBtn">&#8593</button>
+        <footer>
+
+        </footer>
     </body>
 </html>
