@@ -12,7 +12,7 @@
         <script src="assets/js/functions.js"></script>
     </head>
     <body class="light">
-        <header>
+        <header class="sidebar">
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -23,84 +23,91 @@
                 </ul>
             </nav>
         </header>
-        <h1 id="about">About</h1>
-        <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
-        <div class="row">
-            <img src="assets/img/avatar.jpg">
-            <div>
-                <h2>Computer engineer</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="row">
-                    <ul class="column">
-                        <li class="arrow"><b>Birthday: </b>1234-12-12</li>
-                        <li class="arrow"><b>Website: </b>www.example.com</li>
-                        <li class="arrow"><b>Phone: </b>+123 456 7890</li>
-                        <li class="arrow"><b>City: </b>Mars</li>
-                    </ul>
-                    <ul class="column">
-                        <li class="arrow"><b>Age: </b>+999</li>
-                        <li class="arrow"><b>Degree: </b>www.example.com</li>
-                        <li class="arrow"><b>Email: </b>email@example.com</li>
-                        <li class="arrow"><b>Freelance: </b>Unknown</li>
-                    </ul>
-                </div>
-                <p>Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.</p>
-            </div>
-        </div>
-        <h1 id="resume">Resume</h1>
-        <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
-        <div class="row">
-            <div class="column">
-                <h2>Sumary</h2>
-                <h3>Lukas Vaiginis</h3>
-                <p>Computer engineer with experience in modeling, programming and designing.</p>
-                <li>Some address</li>
-                <li>(123) 456-7891</li>
-                <li>email@example.com</li>
+        <main>
+            <img src="assets/img/avatar.jpg" id="home">
+            <h1 id="about">About</h1>
+            <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
+            <div class="row">
+                <img src="assets/img/avatar.jpg">
                 <div>
-                    <h2>Education</h2>
-                    <h3>Bachelor of Computer engineering</h3>
-                    <b>2023-2027</b>
-                    <p>Vilnius tech</p>
-                    <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+                    <h2>Computer engineer</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="row">
+                        <ul class="column">
+                            <li class="arrow"><b>Birthday: </b>1234-12-12</li>
+                            <li class="arrow"><b>Website: </b>www.example.com</li>
+                            <li class="arrow"><b>Phone: </b>+123 456 7890</li>
+                            <li class="arrow"><b>City: </b>Mars</li>
+                        </ul>
+                        <ul class="column">
+                            <li class="arrow"><b>Age: </b>+999</li>
+                            <li class="arrow"><b>Degree: </b>www.example.com</li>
+                            <li class="arrow"><b>Email: </b>email@example.com</li>
+                            <li class="arrow"><b>Freelance: </b>Unknown</li>
+                        </ul>
+                    </div>
+                    <p>Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.</p>
                 </div>
             </div>
-            <div class="column">
-                <h2>Professional Experience</h2>
-                <h3>WEB DESIGN</h3>
-                <b>2018-2019</b>
-                <p>Somewhere in Vilnius</p>
-                <li>Developed website</li>
-                <li>Created diffrent design styles</li>
+            <h1 id="resume">Resume</h1>
+            <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
+            <div class="row">
+                <div class="column">
+                    <h2>Sumary</h2>
+                    <h3>Lukas Vaiginis</h3>
+                    <p>Computer engineer with experience in modeling, programming and designing.</p>
+                    <li>Some address</li>
+                    <li>(123) 456-7891</li>
+                    <li>email@example.com</li>
+                    <div>
+                        <h2>Education</h2>
+                        <h3>Bachelor of Computer engineering</h3>
+                        <b>2023-2027</b>
+                        <p>Vilnius tech</p>
+                        <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h2>Professional Experience</h2>
+                    <h3>WEB DESIGN</h3>
+                    <b>2018-2019</b>
+                    <p>Somewhere in Vilnius</p>
+                    <li>Developed website</li>
+                    <li>Created diffrent design styles</li>
+                </div>
             </div>
-        </div>
-        <button onclick='toggleMode()' id='darkmode-button'>Dark mode</button>
-        <h1 id="portfolio">Portfolio</h1>
-        <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
-        <section id="gallery">
-            <img src="assets/img/blank-book.jpg">
-            <img src="assets/img/nokia-phone.jpg">
-            <img src="assets/img/bear.jpg">
-            <img src="assets/img/moth-lamp.jpg">
-        </section>
-        <h1 id="services">Services</h1>
-        <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
-        <video controls width="600">
-            <source src="assets/video/blocks.mp4" type="video/mp4">
-        </video>
-        <iframe width="600" height="315" 
-            src="https://www.youtube.com/embed/EnTZTRFHmUo"
-            title="YouTube vaizdo įrašas" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-        <audio controls>
-            <source src="assets/audio/pixelman-short-version-199924.mp3" type="audio/mpeg">
-        </audio>
-        <button onclick="topFunction()" id="STTBtn">&#8593</button>
+            <button onclick='toggleMode()' id='darkmode-button'>Dark mode</button>
+            <h1 id="portfolio">Portfolio</h1>
+            <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
+            <section id="gallery">
+                <img src="assets/img/blank-book.jpg">
+                <img src="assets/img/nokia-phone.jpg">
+                <img src="assets/img/bear.jpg">
+                <img src="assets/img/moth-lamp.jpg">
+            </section>
+            <h1 id="services">Services</h1>
+            <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
+            <video controls width="600">
+                <source src="assets/video/blocks.mp4" type="video/mp4">
+            </video>
+            <iframe width="600" height="315" 
+                src="https://www.youtube.com/embed/EnTZTRFHmUo"
+                title="YouTube vaizdo įrašas" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            <audio controls>
+                <source src="assets/audio/pixelman-short-version-199924.mp3" type="audio/mpeg">
+            </audio>
+            <button onclick="topFunction()" id="STTBtn">&#8593</button>
+        </main>
         <footer>
-
+            <p>
+                © Copyright
+                <strong>Xestrojer</strong>
+                 All Rights Reserved
+            </p>
         </footer>
     </body>
 </html>
