@@ -1,7 +1,37 @@
-header{
+.sidebar {
     position: fixed;
-    box-shadow: 10 10 10;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 100%;
+    overflow: auto;
+    background-color: #555;
 }
+
+.sidebar a {
+    display: block;
+    color: #000;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+main{
+    margin-left: 200px;
+    padding: 1px 16px;
+}
+
+footer{
+    place-items: center;
+    align-content: center;
+    height: 100px;
+    width: 100%;
+}
+
 h1{
     font-size: xx-large;
     font-family: Arial, Helvetica, sans-serif;
@@ -18,7 +48,7 @@ h3{
     font-size: medium;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 200px;
-    opacity: 0.5;
+    color: gray;
 }
 
 p{
