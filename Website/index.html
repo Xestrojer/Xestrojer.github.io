@@ -13,6 +13,15 @@
     </head>
     <body class="light">
         <header class="sidebar">
+            <section class="svg-container">
+                <p style="text-align: center;">Some Logo</p>
+                    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="100" r="80" fill="#007BFF" />
+                        <line x1="100" y1="20" x2="100" y2="180" stroke="white" stroke-width="4" />
+                        <line x1="20" y1="100" x2="180" y2="100" stroke="white" stroke-width="4" />
+                        <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="18px" dy=".3em">Xestrojer</text>
+                    </svg>
+            </section>
             <nav>
                 <ul id="menu">
                     <li><a href="#home">Home</a></li>
@@ -74,16 +83,49 @@
                     <p>Somewhere in Vilnius</p>
                     <li>Developed website</li>
                     <li>Created diffrent design styles</li>
+                    <div>
+                        <h2>Random formula</h2>
+                        <h3>Residue theorem</h3>
+                        <b>2024</b>
+                        <p>Vilnius tech</p>
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>f</mi>
+                            <mi>(</mi>
+                            <mi>a</mi>
+                            <mi>)=</mi>
+                            <mfrac>
+                                <mn>1</mn>
+                                <mrow>
+                                    <mn>2</mn>
+                                    <mi>&#x3C0;i</mi>
+                                </mrow>
+                            </mfrac>
+                            <mo>&#x222E;</mo>
+                            <mfrac>
+                                <mrow>
+                                    <mi>f</mi>
+                                    <mi>(z)</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi>z</mi>
+                                    <mo>-</mo>
+                                    <mi>a</mi>
+                                </mrow>
+                            </mfrac>
+                            <mi>d</mi>
+                            <mi>z</mi>
+                        </math>
+                    </div>
                 </div>
             </div>
             <button onclick='toggleMode()' id='darkmode-button'>Dark mode</button>
             <h1 id="portfolio">Portfolio</h1>
             <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
             <section id="gallery">
-                <img src="assets/img/blank-book.jpg">
-                <img src="assets/img/nokia-phone.jpg">
-                <img src="assets/img/bear.jpg">
-                <img src="assets/img/moth-lamp.jpg">
+                <img src="assets/img/blank-book.jpg" alt="book">
+                <img src="assets/img/nokia-phone.jpg" alt="phone">
+                <img src="assets/img/bear.jpg" alt="food">
+                <img src="assets/img/moth-lamp.jpg" alt="meme">
             </section>
             <h1 id="services">Services</h1>
             <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
@@ -100,7 +142,7 @@
             <audio controls>
                 <source src="assets/audio/pixelman-short-version-199924.mp3" type="audio/mpeg">
             </audio>
-            <button onclick="topFunction()" id="STTBtn">&#8593</button>
+            <button onclick="topFunction()" id="STTBtn">&#8593;</button>
         </main>
         <footer>
             <p>
