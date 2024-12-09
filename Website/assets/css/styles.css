@@ -68,6 +68,15 @@ img{
     max-height: 100%;
 }
 
+iframe, video{
+    width: 600px;
+    border: 0;
+}
+
+iframe{
+    height: 315px;
+}
+
 .arrow::marker{
     content: '> ';
     font-weight: bolder;
@@ -105,7 +114,7 @@ body.dark{
     visibility: hidden;
 }
 
-#STTBtn {
+#STTBtn{
     display: none;
     position: fixed;
     bottom: 20px;
@@ -122,8 +131,55 @@ body.dark{
     font-size: 20px;
 }
 
-#STTBtn:hover {
+#STTBtn:hover{
     background-color: #555;
+}
+
+.clock{
+    font-size: 2rem;
+    font-weight: bold;
+    background: #007BFF;
+    color: white;
+    padding: 5px 10px;
+}
+
+form{
+    width: 100%;
+    margin: auto;
+}
+
+label{
+    font-weight: bold;
+}
+
+input, textarea, button{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px 0;
+    font-size: 1rem;
+}
+
+button{
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 25px;
+    justify-self: center;
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+
+.output{
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 830px){
@@ -137,6 +193,13 @@ body.dark{
     ul#menu li{
         width: auto;
         float: left;
+    }
+    .clock{
+        height: 100%;
+        padding: 0;
+        width: auto;
+        float: left;
+        align-content: center;
     }
     main{
         margin-left: 0px;

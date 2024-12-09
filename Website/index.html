@@ -13,14 +13,14 @@
     </head>
     <body class="light">
         <header class="sidebar">
+            <div class="clock" id="clock" style="text-align: center;">00:00:00</div>
             <section class="svg-container">
-                <p style="text-align: center;">Some Logo</p>
-                    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="100" cy="100" r="80" fill="#007BFF" />
-                        <line x1="100" y1="20" x2="100" y2="180" stroke="white" stroke-width="4" />
-                        <line x1="20" y1="100" x2="180" y2="100" stroke="white" stroke-width="4" />
-                        <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="18px" dy=".3em">Xestrojer</text>
-                    </svg>
+                <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="80" fill="#007BFF" />
+                    <line x1="100" y1="20" x2="100" y2="180" stroke="white" stroke-width="4" />
+                    <line x1="20" y1="100" x2="180" y2="100" stroke="white" stroke-width="4" />
+                    <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="18px" dy=".3em">Xestrojer</text>
+                </svg>
             </section>
             <nav>
                 <ul id="menu">
@@ -33,11 +33,11 @@
             </nav>
         </header>
         <main>
-            <img src="assets/img/avatar.jpg" id="home">
+            <img src="assets/img/avatar.jpg" alt="avatar" id="home">
             <h1 id="about">About</h1>
             <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
             <div class="grid-container">
-                <img src="assets/img/avatar.jpg">
+                <img src="assets/img/avatar.jpg" alt="avatar">
                 <div>
                     <h2>Computer engineer</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -65,9 +65,11 @@
                     <h2>Sumary</h2>
                     <h3>Lukas Vaiginis</h3>
                     <p>Computer engineer with experience in modeling, programming and designing.</p>
-                    <li>Some address</li>
-                    <li>(123) 456-7891</li>
-                    <li>email@example.com</li>
+                    <ul>
+                        <li>Some address</li>
+                        <li>(123) 456-7891</li>
+                        <li>email@example.com</li>
+                    </ul>
                     <div>
                         <h2>Education</h2>
                         <h3>Bachelor of Computer engineering</h3>
@@ -81,8 +83,10 @@
                     <h3>WEB DESIGN</h3>
                     <b>2018-2019</b>
                     <p>Somewhere in Vilnius</p>
-                    <li>Developed website</li>
-                    <li>Created diffrent design styles</li>
+                    <ul>
+                        <li>Developed website</li>
+                        <li>Created diffrent design styles</li>
+                    </ul>
                     <div>
                         <h2>Random formula</h2>
                         <h3>Residue theorem</h3>
@@ -129,19 +133,51 @@
             </section>
             <h1 id="services">Services</h1>
             <p>"He who laughs at himself never runs out of things to laugh at."-Marcus Aurelius</p>
-            <video controls width="600">
+            <video controls>
                 <source src="assets/video/blocks.mp4" type="video/mp4">
             </video>
-            <iframe width="600" height="315" 
-                src="https://www.youtube.com/embed/EnTZTRFHmUo"
-                title="YouTube vaizdo įrašas" 
-                frameborder="0" 
+            <iframe src="https://www.youtube.com/embed/EnTZTRFHmUo"
+                title="YouTube vaizdo įrašas"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
             <audio controls>
                 <source src="assets/audio/pixelman-short-version-199924.mp3" type="audio/mpeg">
             </audio>
+            <form id="contactForm">
+                <label for="name">Vardas</label>
+                <input type="text" id="name" required>
+        
+                <label for="surname">Pavardė</label>
+                <input type="text" id="surname" required>
+        
+                <label for="email">El. paštas</label>
+                <input type="email" id="email" required>
+        
+                <label for="phone">Telefono numeris</label>
+                <input type="tel" id="phone" required>
+        
+                <label for="address">Adresas</label>
+                <textarea id="address" rows="2" required></textarea>
+        
+                <label for="question1">Klausimas 1: Kiek esate patenkintas mūsų svetaine (1-10)?</label>
+                <input type="number" id="question1" min="1" max="10" required>
+        
+                <label for="question2">Klausimas 2: Kiek rekomenduotumėte mus kitiems (1-10)?</label>
+                <input type="number" id="question2" min="1" max="10" required>
+        
+                <label for="question3">Klausimas 3: Kiek esate patenkintas dizainu (1-10)?</label>
+                <input type="number" id="question3" min="1" max="10" required>
+        
+                <label for="question4">Klausimas 4: Ar svetainė patogi naudoti (1-10)?</label>
+                <input type="number" id="question4" min="1" max="10" required>
+        
+                <label for="question5">Klausimas 5: Ar radote reikiamą informaciją (1-10)?</label>
+                <input type="number" id="question5" min="1" max="10" required>
+        
+                <button onclick="form()" id="submitBtn">Pateikti</button>
+            </form>
+            <div class="output" id="output"></div>
             <button onclick="topFunction()" id="STTBtn">&#8593;</button>
         </main>
         <footer>
