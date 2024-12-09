@@ -1,4 +1,4 @@
-.sidebar {
+.sidebar{
     position: fixed;
     top: 0px;
     left: 0px;
@@ -8,28 +8,32 @@
     background-color: #555;
 }
 
-.sidebar a {
+.sidebar li{
+    list-style: none;
+}
+
+.sidebar a{
     display: block;
     color: #000;
     padding: 16px;
     text-decoration: none;
 }
 
-.sidebar a:hover:not(.active) {
+.sidebar a:hover:not(.active){
     background-color: #555;
     color: white;
 }
 
 main{
     margin-left: 200px;
-    padding: 1px 16px;
 }
 
 footer{
-    place-items: center;
+    text-align: center;
     align-content: center;
+    margin-left: 200px;
     height: 100px;
-    width: 100%;
+    max-width: 100%;
 }
 
 h1{
@@ -57,14 +61,10 @@ p{
     font-weight: 100px;
 }
 
-#gallery > img{
-    width: 300px;
-    height: 300px;
-}
-
 img{
-    width: 500px;
-    height: 500px;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
 }
 
 .arrow::marker{
@@ -73,12 +73,21 @@ img{
     color: rgb(0, 153, 255);
 }
 
-.row {
-    display: flex;
-  }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 
-.column {
-    flex: 50%;
+#gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(200px, 300px));
+    justify-content: center;
+    align-items: center;
+}
+
+#gallery > img{
+    object-fit: contain;
 }
 
 body.light{
@@ -114,4 +123,21 @@ body.dark{
 
 #STTBtn:hover {
     background-color: #555;
+}
+
+@media screen and (max-width: 830px){
+    .sidebar{
+        width: 100%;
+        height: 100px;
+    }
+    ul#menu li{
+        width: auto;
+        float: left;
+    }
+    main{
+        margin-left: 0px;
+    }
+    footer{
+        margin-left: 0px;
+    }
 }
