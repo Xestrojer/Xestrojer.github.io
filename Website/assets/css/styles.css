@@ -4,6 +4,7 @@
     left: 0px;
     width: 200px;
     height: 100%;
+    z-index: 1;
     overflow: auto;
     background-color: #555;
 }
@@ -69,7 +70,7 @@ img{
 }
 
 iframe, video{
-    width: 600px;
+    width: 100%;
     border: 0;
 }
 
@@ -175,7 +176,7 @@ button:hover{
 }
 
 .output{
-    margin-top: 20px;
+    margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ddd;
     background-color: #f9f9f9;

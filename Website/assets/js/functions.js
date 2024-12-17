@@ -61,18 +61,34 @@ setInterval(updateClock, 1000);
 
 updateClock();
 
-function form() {
+document.getElementById('contactForm').addEventListener('submit', (event) => {
+  event.preventDefault();
 
   const name = document.getElementById('name').value;
   const surname = document.getElementById('surname').value;
   const email = document.getElementById('email').value;
   const phone = document.getElementById('phone').value;
   const address = document.getElementById('address').value;
-  const question1 = parseInt(document.getElementById('question1').value);
-  const question2 = parseInt(document.getElementById('question2').value);
-  const question3 = parseInt(document.getElementById('question3').value);
-  const question4 = parseInt(document.getElementById('question4').value);
-  const question5 = parseInt(document.getElementById('question5').value);
+  const q1 = parseInt(document.getElementById('question1').value);
+  const q2 = parseInt(document.getElementById('question2').value);
+  const q3 = parseInt(document.getElementById('question3').value);
+  const q4 = parseInt(document.getElementById('question4').value);
+  const q5 = parseInt(document.getElementById('question5').value);
+
+  if (!validateEmail(email)) {
+    alert("Klaida: Neteisingas el. pašto formatas!");
+    return;
+  }
+
+  if (!validatePhone(phone)) {
+    alert("Klaida: Telefonas turi būti sudarytas tik iš skaičių!");
+    return;
+  }
+
+  if (address.trim() === "") {
+    alert("Klaida: Adresas negali būti tuščias!");
+    return;
+  }
 
   const formData = {
       name,
@@ -80,30 +96,49 @@ function form() {
       email,
       phone,
       address,
-      question1,
-      question2,
-      question3,
-      question4,
-      question5
+      q1,
+      q2,
+      q3,
+      q4,
+      q5
   };
 
-  console.log('Formos duomenys:', formData);
+  console.log('Form data:', formData);
 
-  const average = ((question1 + question2 + question3 + question4 + question5) / 5).toFixed(2);
+  const avg = ((q1+q2+q3+q4+q5)/5);
 
-  const outputHTML = `
-      <p><strong>Vardas:</strong> ${name}</p>
-      <p><strong>Pavardė:</strong> ${surname}</p>
-      <p><strong>El. paštas:</strong> ${email}</p>
-      <p><strong>Telefono numeris:</strong> ${phone}</p>
-      <p><strong>Adresas:</strong> ${address}</p>
-      <p><strong>Klausimas 1:</strong> ${question1}</p>
-      <p><strong>Klausimas 2:</strong> ${question2}</p>
-      <p><strong>Klausimas 3:</strong> ${question3}</p>
-      <p><strong>Klausimas 4:</strong> ${question4}</p>
-      <p><strong>Klausimas 5:</strong> ${question5}</p>
-      <p><strong>Rezultatas:</strong> ${name} ${surname} (${email}): ${average}</p>
+  const result = `
+      First-name: ${name} <br>
+      Last-name: ${surname} <br>
+      Email: ${email} <br>
+      Phone number: ${phone} <br>
+      Address: ${address} <br>
+      Question 1: ${q1} <br>
+      Question 2: ${q2} <br>
+      Question 3: ${q3} <br>
+      Question 4: ${q4} <br>
+      Question 5: ${q5} <br>
+      Result: ${name} ${surname} (${email}): <span id="avg">${avg.toFixed(2)}</span>
   `;
 
-  document.getElementById('output').innerHTML = outputHTML;
-};
+  document.getElementById('output').innerHTML = result;
+
+  const avgSpan = document.getElementById('avg');
+  if (avg >= 7) {
+      avgSpan.style.color = "green";
+  } else if (avg >= 4) {
+      avgSpan.style.color = "orange";
+  } else {
+      avgSpan.style.color = "red";
+  }
+});
+
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Paprastas el. pašto regex
+  return re.test(email);
+}
+
+function validatePhone(phone) {
+  const re = /^[0-9]+$/; // Tik skaičiai
+  return re.test(phone);
+}
